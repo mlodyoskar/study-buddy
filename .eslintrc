@@ -1,13 +1,19 @@
 {
-    "extends" : ["react-app", "react-app/jest", "prettier"],
-    "plugins" : ["prettier"],
-    "rules" : {
-        "prettier/prettier": ["error", { "singleQuote" : true}]
-    },
-    "env" : {
-        "browser" : true,
-        "node" : true,
-        "es6": true
-    },
-    "parser" : "babel-eslint"
+  "extends": ["react-app", "react-app/jest", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "printWidth": 180
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint"
 }
