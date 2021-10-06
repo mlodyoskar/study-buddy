@@ -9,12 +9,12 @@ export const Wrapper = styled.div`
   width: 34px;
   height: 34px;
   border-radius: 20px;
-  background-color: ${({ average, theme }) =>
-    average < 3
-      ? theme.colors.error
-      : average < 4
-      ? theme.colors.warning
-      : theme.colors.success};
+  background-color: ${({ average, theme }) => {
+    if (average > 4) return theme.colors.success;
+    if (average > 3) return theme.colors.warning;
+    if (average < 3) return theme.colors.error;
+    return theme.colors.grey;
+  }};
   font-weight: bold;
   font-size: ${({ theme }) => theme.fontSize.m};
 `;
