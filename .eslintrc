@@ -5,8 +5,7 @@
     "prettier/prettier": [
       "warn",
       {
-        "singleQuote": true,
-        "printWidth": 180
+        "singleQuote": true
       }
     ]
   },
